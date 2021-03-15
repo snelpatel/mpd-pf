@@ -9,7 +9,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Student Loan - Administrator</title>
+        <title>My Pain Diagnosis</title>
 
         <!-- Bootstrap Core CSS -->
         <link  rel="stylesheet" href="css/bootstrap.min.css"/>
@@ -38,97 +38,7 @@
         <script type="text/javascript" src="jspdf/jspdf.js"></script>
         <script type="text/javascript" src="jspdf/libs/base64.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="js/jspdf.debug.js"></script>
-        <script type='text/javascript'>
-         $(document).ready(function(){
-         $('#modalContactForm').on('click', '.btn-info', function(e){
-         var vwdramount = $('#wdramount').val();
-         var vwdrchequeno = $('#wdrchequeno').val();
-         var vwdrdate = $('#wdrdate').val();
-         var vwdrsid = $('#wdrsid').val();
-         var vwdrpint = $('#wdrintpending').val()
-         if(vwdrpint > 0)
-         {
-            var msg= "Cannot Withdraw From Student's Account. Interest is Pending.";
-            alert(msg);
-         }
-                $.post("withdrawdone.php", //Required URL of the page on server
-                   { // Data Sending With Request To Server
-                      wdramount:vwdramount,
-                      wdrchequeno:vwdrchequeno,
-                      wdrdate:vwdrdate,
-                      wdrsid:vwdrsid,
-                      wdrpint:vwdrpint,
-                   },
-                function(response,status){ // Required Callback Function
-                 $("#result").html("<h4>Account Withdrawn And Balance Updated Successfully!<h4>");//"response" receives - whatever written in echo of above PHP script.
-              });
-         $('#modalContactForm').modal('hide');
-       });
-       });
-      </script>
-
-      <script type='text/javascript'>
-         $(document).ready(function(){
-         $('#modalContactForm1').on('click', '.btn-info', function(e){
-         var vbaldonedate = $('#baldonedate').val();
-         var vbaldonesid = $('#baldonesid').val();
-         var vbaldoneamt = $('#baldoneamt').val();
-         
-                $.post("balancedone.php", //Required URL of the page on server
-                   { // Data Sending With Request To Server
-                      baldonedate:vbaldonedate,
-                      baldonesid:vbaldonesid,
-                      baldoneamt:vbaldoneamt,
-                   },
-                function(response,status){ // Required Callback Function
-                 $("#result1").html("<h4>Balance Done In Account and In Process!<h4>");//"response" receives - whatever written in echo of above PHP script.
-              });
-         $('#modalContactForm1').modal('hide');
-       });
-       });
-      </script>
-
-      <script type='text/javascript'>
-         $(document).ready(function(){
-         $('#modalContactForm2').on('click', '.btn-info', function(e){
-         var vpduedate = $('#pduedate').val();
-         var vpduesid = $('#pduesid').val();
-         
-                $.post("principledue.php", //Required URL of the page on server
-                   { // Data Sending With Request To Server
-                      pduedate:vpduedate,
-                      pduesid:vpduesid,
-                   },
-                function(response,status){ // Required Callback Function
-                 $("#result2").html("<h4>Principle Due in Account!<h4>");//"response" receives - whatever written in echo of above PHP script.
-              });
-         $('#modalContactForm2').modal('hide');
-       });
-       });
-      </script>
-
-      <script type='text/javascript'>
-         $(document).ready(function(){
-         $('#modalContactForm3').on('click', '.btn-info', function(e){
-         var vbankname = $('#bankname').val();
-         var vbankacno = $('#bankacno').val();
-         var vbanksid = $('#banksid').val();
-         
-                $.post("bankdetails.php", //Required URL of the page on server
-                   { // Data Sending With Request To Server
-                      bankname:vbankname,
-                      bankacno:vbankacno,
-                      banksid:vbanksid,
-                   },
-                function(response,status){ // Required Callback Function
-                 $("#result3").html("<h4>Bank Details Updated!<h4>");//"response" receives - whatever written in echo of above PHP script.
-              });
-         $('#modalContactForm3').modal('hide');
-       });
-       });
-      </script>
-            
+        <script type="text/javascript" src="js/jspdf.debug.js"></script>            
     </head>
 
     <body>  

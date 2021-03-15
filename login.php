@@ -70,6 +70,7 @@ include_once 'includes/header.php';
 				</div>
 				<?php } ?>
 				<button type="submit" class="btn btn-success loginField" >Login</button>
+				<br/><a href="register.php">New registration? Sign Up Here</a>
 			</div>
 		</div>
 	</form>
